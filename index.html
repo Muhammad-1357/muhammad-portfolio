@@ -1,275 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Ibrahim Musa | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Ibrahim Musa | MERN Developer</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
 
-    body{
-      background:#0f172a;
-      color:white;
-      line-height:1.6;
-    }
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#111827;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
 
-    nav{
-      position:fixed;
-      width:100%;
-      background:#111827;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 10%;
-      z-index:1000;
-    }
+nav h2{
+color:#38bdf8;
+}
 
-    nav h2{
-      color:#60a5fa;
-    }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-    nav ul{
-      display:flex;
-      list-style:none;
-      gap:25px;
-    }
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
-    }
+nav a:hover{
+color:#38bdf8;
+}
 
-    nav a:hover{
-      color:#60a5fa;
-    }
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 8% 60px;
+background:linear-gradient(135deg,#1d4ed8,#7c3aed);
+}
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-      background:linear-gradient(135deg,#2563eb,#7c3aed);
-    }
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+width:100%;
+max-width:1100px;
+}
 
-    .hero h1{
-      font-size:55px;
-      margin-bottom:10px;
-    }
+.hero-text{
+flex:1;
+min-width:280px;
+}
 
-    .hero p{
-      font-size:22px;
-      margin-bottom:30px;
-    }
+.hero-text h1{
+font-size:52px;
+margin-bottom:10px;
+}
 
-    .btn{
-      display:inline-block;
-      background:white;
-      color:#2563eb;
-      padding:14px 28px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+.hero-text h3{
+font-size:22px;
+margin-bottom:20px;
+color:#e0f2fe;
+}
 
-    section{
-      padding:80px 10%;
-    }
+.hero-text p{
+font-size:17px;
+margin-bottom:30px;
+max-width:520px;
+}
 
-    h2.section-title{
-      color:#60a5fa;
-      font-size:34px;
-      margin-bottom:25px;
-      text-align:center;
-    }
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
 
-    .about{
-      text-align:center;
-      max-width:850px;
-      margin:auto;
-      font-size:18px;
-    }
+.btn{
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-      gap:15px;
-      margin-top:30px;
-    }
+.primary{
+background:white;
+color:#1d4ed8;
+}
 
-    .skill{
-      background:#1e293b;
-      padding:18px;
-      text-align:center;
-      border-radius:10px;
-      font-weight:bold;
-    }
+.secondary{
+border:2px solid white;
+color:white;
+}
 
-    .project-card{
-      background:#1e293b;
-      border-radius:12px;
-      padding:30px;
-      max-width:900px;
-      margin:auto;
-    }
+.hero-image img{
+width:320px;
+height:320px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid white;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
 
-    .project-card h3{
-      color:#93c5fd;
-      margin-bottom:10px;
-    }
+section{
+padding:80px 8%;
+max-width:1100px;
+margin:auto;
+}
 
-    .project-card a{
-      color:#60a5fa;
-      text-decoration:none;
-      font-weight:bold;
-    }
+.title{
+font-size:34px;
+text-align:center;
+color:#60a5fa;
+margin-bottom:30px;
+}
 
-    .education{
-      background:#1e293b;
-      padding:25px;
-      border-radius:12px;
-      text-align:center;
-      max-width:600px;
-      margin:auto;
-    }
+.about{
+text-align:center;
+font-size:18px;
+max-width:800px;
+margin:auto;
+}
 
-    footer{
-      background:#111827;
-      text-align:center;
-      padding:25px;
-      color:#cbd5e1;
-    }
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:18px;
+}
 
-    @media(max-width:768px){
-      nav{
-        flex-direction:column;
-        gap:10px;
-      }
+.skill{
+background:#1e293b;
+padding:18px;
+text-align:center;
+border-radius:10px;
+font-weight:bold;
+}
 
-      nav ul{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-      }
+.project{
+background:#1e293b;
+padding:30px;
+border-radius:14px;
+}
 
-      .hero h1{
-        font-size:38px;
-      }
+.project h3{
+color:#93c5fd;
+margin-bottom:15px;
+}
 
-      .hero p{
-        font-size:18px;
-      }
-    }
-  </style>
+.project a{
+display:inline-block;
+margin-top:18px;
+text-decoration:none;
+color:#38bdf8;
+font-weight:bold;
+}
+
+.contact{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.contact-card{
+background:#1e293b;
+padding:22px;
+border-radius:10px;
+text-align:center;
+}
+
+footer{
+background:#111827;
+padding:25px;
+text-align:center;
+color:#cbd5e1;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-image img{
+width:260px;
+height:260px;
+}
+
+.buttons{
+justify-content:center;
+}
+
+}
+</style>
+
 </head>
-
 <body>
 
 <nav>
-  <h2>MIM</h2>
+<h2>MIM</h2>
 
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#project">Project</a></li>
-    <li><a href="#education">Education</a></li>
-  </ul>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <section class="hero">
-  <h1>Muhammad Ibrahim Musa</h1>
 
-  <p>Aspiring Full-Stack MERN Developer</p>
+<div class="hero-content">
 
-  <a class="btn" href="https://electronics-ecommerce-frontend-gray.vercel.app" target="_blank">
-    View ElectroShop
-  </a>
+<div class="hero-text">
+
+<h1>Muhammad Ibrahim Musa</h1>
+
+<h3>Full-Stack MERN Developer</h3>
+
+<p>
+I build responsive, secure and modern web applications using
+MongoDB, Express.js, React and Node.js.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="https://electronics-ecommerce-frontend-gray.vercel.app" target="_blank">
+View ElectroShop
+</a>
+
+<a class="btn secondary" href="#" download>
+Download CV
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="profile.jpg" alt="Muhammad Ibrahim Musa">
+</div>
+
+</div>
+
 </section>
 
 <section id="about">
-  <h2 class="section-title">About Me</h2>
 
-  <div class="about">
-    <p>
-      I'm Muhammad Ibrahim Musa, a Full-Stack Web Development student at TechyJaunt.
-      I specialize in building modern web applications using MongoDB, Express.js,
-      React and Node.js. My goal is to create beautiful, fast and useful digital
-      products that solve real-world problems.
-    </p>
-  </div>
+<h2 class="title">About Me</h2>
+
+<p class="about">
+I'm Muhammad Ibrahim Musa, a Full-Stack Web Development student at TechyJaunt
+(expected graduation 2026). I'm passionate about creating real-world software,
+beautiful user interfaces, and scalable backend systems.
+</p>
+
 </section>
 
 <section id="skills">
-  <h2 class="section-title">Technical Skills</h2>
 
-  <div class="skills">
-    <div class="skill">React</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Node.js</div>
-    <div class="skill">Express.js</div>
-    <div class="skill">MongoDB</div>
-    <div class="skill">JWT</div>
-    <div class="skill">Git</div>
-    <div class="skill">GitHub</div>
-    <div class="skill">Render</div>
-    <div class="skill">Vercel</div>
-  </div>
+<h2 class="title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">React</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Node.js</div>
+<div class="skill">Express</div>
+<div class="skill">MongoDB</div>
+<div class="skill">JWT</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Render</div>
+<div class="skill">Vercel</div>
+
+</div>
+
 </section>
 
-<section id="project">
-  <h2 class="section-title">Featured Project</h2>
+<section id="projects">
 
-  <div class="project-card">
-    <h3>ElectroShop – MERN Electronics E-commerce</h3>
+<h2 class="title">Featured Project</h2>
 
-    <p>
-      A fully deployed e-commerce web application featuring secure user authentication,
-      product management, shopping cart, checkout, customer order history,
-      and an admin dashboard with CRUD functionality.
-    </p>
+<div class="project">
 
-    <br>
+<h3>ElectroShop — MERN Electronics E-commerce</h3>
 
-    <p><strong>Tech Stack:</strong></p>
+<p>
+A fully deployed e-commerce platform featuring user authentication,
+shopping cart, checkout, customer order history,
+admin dashboard, product CRUD operations,
+and MongoDB Atlas integration.
+</p>
 
-    <p>React • Node.js • Express.js • MongoDB Atlas • Render • Vercel</p>
+<p><strong>Stack:</strong> React • Node.js • Express • MongoDB • Render • Vercel</p>
 
-    <br>
+<a href="https://electronics-ecommerce-frontend-gray.vercel.app" target="_blank">
+Visit Live Project →
+</a>
 
-    <a href="https://electronics-ecommerce-frontend-gray.vercel.app" target="_blank">
-      Live Demo →
-    </a>
-  </div>
+</div>
+
 </section>
 
-<section id="education">
-  <h2 class="section-title">Education</h2>
+<section id="contact">
 
-  <div class="education">
-    <h3>TechyJaunt</h3>
+<h2 class="title">Contact</h2>
 
-    <p>Full-Stack Web Development Program</p>
+<div class="contact">
 
-    <p><strong>Expected Graduation:</strong> 2026</p>
-  </div>
+<div class="contact-card">
+<h3>Email</h3>
+<p>youremail@example.com</p>
+</div>
+
+<div class="contact-card">
+<h3>School</h3>
+<p>TechyJaunt</p>
+</div>
+
+<div class="contact-card">
+<h3>Graduation</h3>
+<p>2026</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 Muhammad Ibrahim Musa</p>
-  <p>Full-Stack MERN Developer</p>
+
+<p>© 2026 Muhammad Ibrahim Musa</p>
+
+<p>Full-Stack MERN Developer</p>
+
 </footer>
 
 </body>
